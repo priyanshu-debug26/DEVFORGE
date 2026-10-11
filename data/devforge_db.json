@@ -1,0 +1,2340 @@
+{
+  "projects": [
+    {
+      "id": "proj_1791695975770_5tegn",
+      "title": "Entraînement ATLAS — test réel de monétisation multi-domaines",
+      "slug": "entra-nement-atlas-test-r-el-de-mon-tisation-multi-domaines",
+      "description": "## Objectif\nEntraîner Louis OS à transformer ses capacités en revenus réels, hors charbon, en explorant plusieurs métiers et plateformes légales puis en comparant leur potentiel économique sur des preuves vérifiables.\n\n## Principe\nChaque domaine est traité comme une expérience courte avec hypothèse,",
+      "stage": "architected",
+      "createdAt": "2026-10-11T05:19:35.770Z",
+      "updatedAt": "2026-10-11T05:46:29.152Z",
+      "problemId": "gh_4920417749",
+      "originalProblem": {
+        "id": "gh_4920417749",
+        "source": "github",
+        "sourceUrl": "https://github.com/liubaining-louis/louis-os/issues/77",
+        "sourceId": "liubaining-louis/louis-os#77",
+        "title": "Entraînement ATLAS — test réel de monétisation multi-domaines",
+        "body": "## Objectif\nEntraîner Louis OS à transformer ses capacités en revenus réels, hors charbon, en explorant plusieurs métiers et plateformes légales puis en comparant leur potentiel économique sur des preuves vérifiables.\n\n## Principe\nChaque domaine est traité comme une expérience courte avec hypothèse, action réelle, preuve, métriques et décision continuer / pivoter / arrêter. Ne jamais confondre recherche, volume d'activité ou nombre de messages avec monétisation.\n\n## Vagues d'entraînement\n\n### Vague 1 — revenus rapides et faible friction\n- microservices de recherche, rédaction, traduction, synthèse et qualification de leads ;\n- missions ponctuelles et tests utilisateurs ;\n- concours, bounties non techniques et petites prestations numériques ;\n- vente de livrables réutilisables.\n\n### Vague 2",
+        "author": "liubaining-louis",
+        "createdAt": "2026-07-18T23:08:47Z",
+        "commentsCount": 2500,
+        "upvotesCount": 2500,
+        "tags": [],
+        "ecosystem": "pypi",
+        "analysis": {
+          "analyzedAt": "2026-10-11T05:19:19.586Z",
+          "providerUsed": "mock",
+          "modelUsed": "devforge-gateway-simulator",
+          "rootCause": "Complex architectural boundary or synchronization limitation in developer workflow.",
+          "affectedPersonas": [
+            "Full-Stack Engineers",
+            "DevOps Engineers",
+            "Open Source Maintainers"
+          ],
+          "existingWorkarounds": [
+            "Ad-hoc bash scripts",
+            "Manual error inspection",
+            "Heavy third-party SaaS"
+          ],
+          "marketGap": "Lack of a lightweight, zero-overhead developer utility addressing this specific friction point.",
+          "projectOpportunityScore": 84,
+          "opportunityRationale": "Significant community discussion indicates widespread pain point across teams.",
+          "suggestedStack": {
+            "frontend": [
+              "Next.js 14 App Router",
+              "Tailwind CSS"
+            ],
+            "backend": [
+              "TypeScript",
+              "Node.js"
+            ],
+            "database": [
+              "Supabase",
+              "Redis"
+            ],
+            "infrastructure": [
+              "Docker",
+              "Vercel"
+            ]
+          },
+          "implementationPhases": [
+            {
+              "phase": "Phase 1: Core Automation",
+              "duration": "2-3 days",
+              "deliverables": [
+                "CLI utility",
+                "Basic test suite"
+              ]
+            },
+            {
+              "phase": "Phase 2: Cloud Sync & Dashboard",
+              "duration": "4-5 days",
+              "deliverables": [
+                "Web UI",
+                "Security validation checks"
+              ]
+            }
+          ],
+          "uncertaintyAdvisory": "Analysis generated via DEVFORGE AI Gateway. Market saturation and existing proprietary plugins should be validated independently.",
+          "confidenceScore": 80
+        }
+      },
+      "techStack": [
+        "Next.js 14 App Router",
+        "Tailwind CSS",
+        "TypeScript",
+        "Node.js",
+        "Supabase",
+        "Redis",
+        "Docker",
+        "Vercel"
+      ],
+      "repositoryUrl": "https://github.com/AyushPatwa11/VeriGraph-AI",
+      "tags": [],
+      "buildPlan": {
+        "summary": "Implementation Specification for Entraînement ATLAS — test réel de monétisation multi-domaines",
+        "architectureNotes": "# Entraînement ATLAS – Technical Build & Implementation Plan  \n**Project**: “Entraînement ATLAS — test réel de monétisation multi-domaines”  \n**Goal**: Train Louis OS into a revenue‑generating engine across multiple legal platforms.  \n**Stack** (Vague 2): Next.js 14 (App Router), Tailwind CSS, TypeScript, Node.js, Supabase, Redis, Docker, Vercel.  \n\n> **Delivery format** – 3 sections  \n> 1. Executive Architecture Summary  \n> 2. Threat Model & Security Boundaries  \n> 3. Phased Implementation Roadmap (3 milestones + tasks)  \n\n---\n\n## 1. Executive Architecture Summary\n\n| Layer | Purpose | Key Components | Deployment |\n|-------|---------|----------------|------------|\n| **Client** | User‑facing portal for experiments & dashboards | Next.js 14 (SSR + Edge) + Tailwind + TS | Vercel (edge & serverless) |\n| **API Gateway** | Single entry point, routing, rate‑limiting, auth enforcement | Vercel Edge Functions + Cloudflare Tunnel (optional) | Vercel |\n| **Micro‑services** | Domain‑specific logic (search, writing, translation, lead‑qualification, etc.) | Node.js 20 + NestJS/Express, TypeScript | Docker + Vercel Serverless Functions or a lightweight Kubernetes cluster (if >10 services) |\n| **Data Layer** | Persistent storage & authentication | Supabase (PostgreSQL + Auth + Storage) | Supabase Cloud (managed) |\n| **Cache** | Low‑latency look‑ups, rate‑limit counters | Redis (managed, e.g., Redis Cloud or self‑hosted on Vercel) | Docker / managed |\n| **Observability** | Logging, tracing, metrics | OpenTelemetry (Node), Grafana Loki + Prometheus, Sentry | Docker + Vercel |\n| **CI/CD** | Secure, reproducible builds & deployments | GitHub Actions + Docker Hub, Vercel Deployments | GitHub → Vercel |\n| **Security & Governance** | Zero‑trust, least‑privilege, data‑protection | OIDC (Supabase Auth), JWT, CSP, HSTS, OWASP ASVS, Vault for secrets | Supabase + HashiCorp Vault (self‑hosted or managed) |\n\n**Key design principles**\n\n1. **Zero‑trust** – every request is authenticated & authorized; network segmentation is enforced via service‑to‑service tokens.\n2. **Least privilege** – each micro‑service only has the database schema and API endpoints it needs.\n3. **Defense‑in‑depth** – layered security: network isolation, runtime hardening, input validation, rate‑limiting, WAF.\n4. **Performance‑first** – edge caching, CDN, Redis, async job queue, lazy loading of heavy modules.\n5. **Observability & auditability** – structured logs, distributed tracing, audit logs for all data changes.\n6. **Compliance** – GDPR‑ready (Supabase handles PII), PCI‑ready if needed for payment flows.\n\n---\n\n## 2. Threat Model & Security Boundaries\n\n| Threat Actor | Asset at Risk | Attack Vectors | Mitigations |\n|--------------|---------------|----------------|-------------|\n| **External attackers** | API, data, user accounts | SQL injection, XSS, CSRF, SSRF, brute‑force, DDoS | Prepared statements, CSP, CSRF tokens, input sanitization, rate‑limit, WAF, Cloudflare protection |\n| **Insider (dev, ops)** | Secrets, code, config | Mis‑configuration, privilege escalation | Vault + role‑based secrets, GitHub secrets, GitHub Actions audit, minimal Docker privileges |\n| **Malicious users** | Service logic, revenue flows | Abuse of micro‑services, request flooding | JWT scopes, per‑service rate‑limits, quotas, audit logs |\n| **Supply‑chain** | Dependencies | Compromised npm packages | Dependabot, Snyk, lockfiles, npm audit, reproducible builds |\n| **Data exfiltration** | PII, business data | API leaks, mis‑configured storage | Encryption at rest (Supabase), TLS everywhere, access logs, S3 bucket policies |\n| **Denial‑of‑Service** | Availability | Traffic spikes, resource exhaustion | Vercel Edge functions auto‑scale, Redis throttling, Cloudflare CDN, graceful degradation |\n| **Code‑injection via user‑content** | Rendering engine | Malicious HTML, script injection | Sanitization libraries, server‑side rendering with safe defaults |\n\n### Security Boundaries\n\n1. **User Boundary** – Authenticated via Supabase OIDC, JWT signed with RS256, scopes per role (`user`, `admin`, `service`).\n2. **Service Boundary** – Each micro‑service exposes only its public API; internal APIs are protected by mutual TLS (or mTLS‑style tokens).\n3. **Data Boundary** – Database schemas are separated by role; only micro‑services with relevant roles can query tables.\n4. **Network Boundary** – All services communicate over a private VPC (if using a Kubernetes cluster) or via Vercel’s internal routing. No inbound ports exposed except the API Gateway.\n5. **Secrets Boundary** – Secrets stored in Vault, injected into containers at runtime; never committed to repo.\n\n---\n\n## 3. Phased Implementation Roadmap\n\n### **Milestone 1 – Foundation (Weeks 1‑4)**  \n**Goal**: Establish core infrastructure, security baseline, and a reusable monorepo skeleton.\n\n| Task | Owner | Deliverables | Notes |\n|------|-------|--------------|-------|\n| **1.1** – Set up GitHub monorepo (packages: `frontend`, `api`, `infra`) | DevOps | GitHub repo with CI templates | Use `pnpm` workspaces |\n| **1.2** – Create Vercel project and link repo | DevOps | Vercel dashboard with preview & prod branches | |\n| **1.3** – Spin up Supabase instance (auth + Postgres) | DevOps | Supabase project, database schema templates | Enable row‑level security |\n| **1.4** – Deploy Redis (managed) | DevOps | Redis endpoint, TLS enabled | |\n| **1.5** – Configure Vault (self‑hosted on a dedicated container) | Security | Vault server, secrets for DB credentials, API keys | Use sealed/unseal automation |\n| **1.6** – Build CI/CD pipeline (GitHub Actions) | DevOps | Build/test/deploy workflows for `frontend`, `api` | Enforce code‑review gates |\n| **1.7** – Implement basic OIDC + JWT auth in Next.js | Frontend | Login flow, token storage in HTTP‑Only cookie | CSP & HSTS headers |\n| **1.8** – Create “Hello World” micro‑service (health‑check) | Backend | Node + Express, Dockerfile, API Gateway route | |\n| **1.9** – Set up observability stack (OpenTelemetry, Loki, Prometheus) | DevOps | Dashboards, alerts | |\n| **1.10** – Security hardening checklist (OWASP ASVS v4) | Security | Checklist, audit report | |\n\n**Milestone Outcome**  \n- Fully functional, zero‑trust dev environment.  \n- All services can authenticate, log, and trace.  \n- Secrets are centrally managed.  \n\n---\n\n### **Milestone 2 – Rapid‑Revenue Micro‑services (Weeks 5‑10)**  \n**Goal**: Deploy first batch of micro‑services (search, writing, translation, lead‑qualification) and expose a simple marketplace UI.\n\n| Task | Owner | Deliverables | Notes |\n|------|-------|--------------|-------|\n| **2.1** – Define data schemas for each domain | Data Engineer | Supabase tables, RLS policies | |\n| **",
+        "gatewayMetadata": {
+          "provider": "groq",
+          "model": "openai/gpt-oss-safeguard-20b",
+          "latencyMs": 2432
+        },
+        "phases": [
+          {
+            "title": "Milestone 1: Core Primitives & Contract Validation",
+            "tasks": [
+              "Establish strict Zod input schemas and edge headers",
+              "Set up local unit test suites with security mocking",
+              "Configure automated OSV dependency gating"
+            ],
+            "status": "completed"
+          },
+          {
+            "title": "Milestone 2: Middleware & Business Logic",
+            "tasks": [
+              "Implement primary business engine with retry logic",
+              "Enforce rate limits and CORS security policies",
+              "Integrate telemetry and error boundary handlers"
+            ],
+            "status": "in_progress"
+          },
+          {
+            "title": "Milestone 3: Security Hardening & CI/CD Gating",
+            "tasks": [
+              "Audit Dockerfile for non-root execution",
+              "Sweep codebase for lingering test credentials",
+              "Deploy to staging and verify end-to-end flow"
+            ],
+            "status": "pending"
+          }
+        ]
+      },
+      "latestScan": {
+        "id": "scan_1791696003404",
+        "repoUrl": "https://github.com/AyushPatwa11/VeriGraph-AI",
+        "owner": "AyushPatwa11",
+        "repo": "VeriGraph-AI",
+        "scannedAt": "2026-10-11T05:20:03.404Z",
+        "scanDurationMs": 632,
+        "executiveScore": 100,
+        "securityGrade": "A+",
+        "totalFindings": 0,
+        "severityBreakdown": {
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0,
+          "info": 0
+        },
+        "scannersRun": [
+          {
+            "name": "OSV.dev Vulnerability DB",
+            "status": "completed",
+            "findingsCount": 0
+          },
+          {
+            "name": "Gitleaks Pattern Engine",
+            "status": "completed",
+            "findingsCount": 0
+          },
+          {
+            "name": "DEVFORGE Dockerfile Linter",
+            "status": "completed",
+            "findingsCount": 0,
+            "note": "No Dockerfile present in repository root"
+          },
+          {
+            "name": "Heuristic API Security Audit",
+            "status": "completed",
+            "findingsCount": 0
+          }
+        ],
+        "findings": [],
+        "dependenciesAudited": 0,
+        "filesInspected": [
+          "docker-compose.yml"
+        ]
+      }
+    }
+  ],
+  "problems": [
+    {
+      "id": "gh_4920417749",
+      "source": "github",
+      "sourceUrl": "https://github.com/liubaining-louis/louis-os/issues/77",
+      "sourceId": "liubaining-louis/louis-os#77",
+      "title": "Entraînement ATLAS — test réel de monétisation multi-domaines",
+      "body": "## Objectif\nEntraîner Louis OS à transformer ses capacités en revenus réels, hors charbon, en explorant plusieurs métiers et plateformes légales puis en comparant leur potentiel économique sur des preuves vérifiables.\n\n## Principe\nChaque domaine est traité comme une expérience courte avec hypothèse, action réelle, preuve, métriques et décision continuer / pivoter / arrêter. Ne jamais confondre recherche, volume d'activité ou nombre de messages avec monétisation.\n\n## Vagues d'entraînement\n\n### Vague 1 — revenus rapides et faible friction\n- microservices de recherche, rédaction, traduction, synthèse et qualification de leads ;\n- missions ponctuelles et tests utilisateurs ;\n- concours, bounties non techniques et petites prestations numériques ;\n- vente de livrables réutilisables.\n\n### Vague 2",
+      "author": "liubaining-louis",
+      "createdAt": "2026-07-18T23:08:47Z",
+      "commentsCount": 2500,
+      "upvotesCount": 2500,
+      "tags": [],
+      "ecosystem": "pypi",
+      "analysis": {
+        "analyzedAt": "2026-10-11T05:19:19.586Z",
+        "providerUsed": "mock",
+        "modelUsed": "devforge-gateway-simulator",
+        "rootCause": "Complex architectural boundary or synchronization limitation in developer workflow.",
+        "affectedPersonas": [
+          "Full-Stack Engineers",
+          "DevOps Engineers",
+          "Open Source Maintainers"
+        ],
+        "existingWorkarounds": [
+          "Ad-hoc bash scripts",
+          "Manual error inspection",
+          "Heavy third-party SaaS"
+        ],
+        "marketGap": "Lack of a lightweight, zero-overhead developer utility addressing this specific friction point.",
+        "projectOpportunityScore": 84,
+        "opportunityRationale": "Significant community discussion indicates widespread pain point across teams.",
+        "suggestedStack": {
+          "frontend": [
+            "Next.js 14 App Router",
+            "Tailwind CSS"
+          ],
+          "backend": [
+            "TypeScript",
+            "Node.js"
+          ],
+          "database": [
+            "Supabase",
+            "Redis"
+          ],
+          "infrastructure": [
+            "Docker",
+            "Vercel"
+          ]
+        },
+        "implementationPhases": [
+          {
+            "phase": "Phase 1: Core Automation",
+            "duration": "2-3 days",
+            "deliverables": [
+              "CLI utility",
+              "Basic test suite"
+            ]
+          },
+          {
+            "phase": "Phase 2: Cloud Sync & Dashboard",
+            "duration": "4-5 days",
+            "deliverables": [
+              "Web UI",
+              "Security validation checks"
+            ]
+          }
+        ],
+        "uncertaintyAdvisory": "Analysis generated via DEVFORGE AI Gateway. Market saturation and existing proprietary plugins should be validated independently.",
+        "confidenceScore": 80
+      }
+    },
+    {
+      "id": "gh_3898161866",
+      "source": "github",
+      "sourceUrl": "https://github.com/BrianTruong23/kanban-coding-agents/issues/7",
+      "sourceId": "BrianTruong23/kanban-coding-agents#7",
+      "title": "Bug: Newly added tasks do not appear on the Kanban board",
+      "body": "When users add a new task through the form, the task is not appearing in any of the Kanban columns on the website. This prevents users from seeing their newly created tasks, including all their details. The task creation process itself might be succeeding, but the update or rendering logic for the board is not picking up the new task.\\n\\nSteps to reproduce:\\n1. Navigate to the Kanban board.\\n2. Fill out the form to add a new task.\\n3. Submit the form.\\nExpected behavior: The new task should appear in the appropriate column on the board.\\nActual behavior: The new task does not appear.",
+      "author": "BrianTruong23",
+      "createdAt": "2026-02-04T19:51:28Z",
+      "commentsCount": 2500,
+      "upvotesCount": 2500,
+      "tags": [],
+      "ecosystem": "general",
+      "analysis": {
+        "analyzedAt": "2026-10-11T05:15:49.695Z",
+        "providerUsed": "mock",
+        "modelUsed": "devforge-gateway-simulator",
+        "rootCause": "Complex architectural boundary or synchronization limitation in developer workflow.",
+        "affectedPersonas": [
+          "Full-Stack Engineers",
+          "DevOps Engineers",
+          "Open Source Maintainers"
+        ],
+        "existingWorkarounds": [
+          "Ad-hoc bash scripts",
+          "Manual error inspection",
+          "Heavy third-party SaaS"
+        ],
+        "marketGap": "Lack of a lightweight, zero-overhead developer utility addressing this specific friction point.",
+        "projectOpportunityScore": 84,
+        "opportunityRationale": "Significant community discussion indicates widespread pain point across teams.",
+        "suggestedStack": {
+          "frontend": [
+            "Next.js 14 App Router",
+            "Tailwind CSS"
+          ],
+          "backend": [
+            "TypeScript",
+            "Node.js"
+          ],
+          "database": [
+            "Supabase",
+            "Redis"
+          ],
+          "infrastructure": [
+            "Docker",
+            "Vercel"
+          ]
+        },
+        "implementationPhases": [
+          {
+            "phase": "Phase 1: Core Automation",
+            "duration": "2-3 days",
+            "deliverables": [
+              "CLI utility",
+              "Basic test suite"
+            ]
+          },
+          {
+            "phase": "Phase 2: Cloud Sync & Dashboard",
+            "duration": "4-5 days",
+            "deliverables": [
+              "Web UI",
+              "Security validation checks"
+            ]
+          }
+        ],
+        "uncertaintyAdvisory": "Analysis generated via DEVFORGE AI Gateway. Market saturation and existing proprietary plugins should be validated independently.",
+        "confidenceScore": 80
+      }
+    },
+    {
+      "id": "gh_5701577042",
+      "source": "github",
+      "sourceUrl": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1354",
+      "sourceId": "SoulSchoolAcademy/NayaPOWER#1354",
+      "title": "🔱 TEAM NAYA — Priority One execution feed (successor to #554)",
+      "body": "Per Shawn (human director), 2026-10-04: #554 ran to ~1,714 comments and is history. **#1354 is the live Team Naya coordination feed.** When this feed becomes too long, cap it and open the next successor; no feed runs forever.\n\n## Durable receipts / canonical memory\n- Whole-repository alignment report: `BRAIN/90-OPERATIONS/2026-10-04-WHOLE-REPOSITORY-ALIGNMENT.md`\n- Current cold-Naya source reconciliation: `NAYA-ACTIVATION/CURRENT-REALITY/SOURCE-PRECEDENCE-AND-NAVIGATION-RECONCILIATION-2026-10-04.md`\n- Smart Note / learning-law candidates remain linked in the PRs below.\n- Historical #554 receipts remain history and are not reposted as current truth.\n\n## Current mission\nThe priority is no longer proving that we can build pieces.\n\n**PROVE THAT THE BRAIN LEARNS.**\n\nTarget:\n**CAPTURE → PERSIST ",
+      "author": "SoulSchoolAcademy",
+      "createdAt": "2026-10-04T17:24:28Z",
+      "commentsCount": 2500,
+      "upvotesCount": 2500,
+      "tags": [],
+      "ecosystem": "general",
+      "analysis": {
+        "analyzedAt": "2026-10-11T04:51:53.317Z",
+        "providerUsed": "mock",
+        "modelUsed": "devforge-gateway-simulator",
+        "rootCause": "Complex architectural boundary or synchronization limitation in developer workflow.",
+        "affectedPersonas": [
+          "Full-Stack Engineers",
+          "DevOps Engineers",
+          "Open Source Maintainers"
+        ],
+        "existingWorkarounds": [
+          "Ad-hoc bash scripts",
+          "Manual error inspection",
+          "Heavy third-party SaaS"
+        ],
+        "marketGap": "Lack of a lightweight, zero-overhead developer utility addressing this specific friction point.",
+        "projectOpportunityScore": 84,
+        "opportunityRationale": "Significant community discussion indicates widespread pain point across teams.",
+        "suggestedStack": {
+          "frontend": [
+            "Next.js 14 App Router",
+            "Tailwind CSS"
+          ],
+          "backend": [
+            "TypeScript",
+            "Node.js"
+          ],
+          "database": [
+            "Supabase",
+            "Redis"
+          ],
+          "infrastructure": [
+            "Docker",
+            "Vercel"
+          ]
+        },
+        "implementationPhases": [
+          {
+            "phase": "Phase 1: Core Automation",
+            "duration": "2-3 days",
+            "deliverables": [
+              "CLI utility",
+              "Basic test suite"
+            ]
+          },
+          {
+            "phase": "Phase 2: Cloud Sync & Dashboard",
+            "duration": "4-5 days",
+            "deliverables": [
+              "Web UI",
+              "Security validation checks"
+            ]
+          }
+        ],
+        "uncertaintyAdvisory": "Analysis generated via DEVFORGE AI Gateway. Market saturation and existing proprietary plugins should be validated independently.",
+        "confidenceScore": 80
+      }
+    },
+    {
+      "id": "test_1",
+      "source": "github",
+      "sourceUrl": "https://github.com/test/repo",
+      "sourceId": "test/1",
+      "title": "Memory leak in JWT edge verification",
+      "body": "Under high concurrency, JWT verify leaks Buffer instances causing OOM crash.",
+      "analysis": {
+        "analyzedAt": "2026-10-11T03:26:39.639Z",
+        "providerUsed": "mock",
+        "modelUsed": "devforge-gateway-simulator",
+        "rootCause": "Complex architectural boundary or synchronization limitation in developer workflow.",
+        "affectedPersonas": [
+          "Full-Stack Engineers",
+          "DevOps Engineers",
+          "Open Source Maintainers"
+        ],
+        "existingWorkarounds": [
+          "Ad-hoc bash scripts",
+          "Manual error inspection",
+          "Heavy third-party SaaS"
+        ],
+        "marketGap": "Lack of a lightweight, zero-overhead developer utility addressing this specific friction point.",
+        "projectOpportunityScore": 84,
+        "opportunityRationale": "Significant community discussion indicates widespread pain point across teams.",
+        "suggestedStack": {
+          "frontend": [
+            "Next.js 14 App Router",
+            "Tailwind CSS"
+          ],
+          "backend": [
+            "TypeScript",
+            "Node.js"
+          ],
+          "database": [
+            "Supabase",
+            "Redis"
+          ],
+          "infrastructure": [
+            "Docker",
+            "Vercel"
+          ]
+        },
+        "implementationPhases": [
+          {
+            "phase": "Phase 1: Core Automation",
+            "duration": "2-3 days",
+            "deliverables": [
+              "CLI utility",
+              "Basic test suite"
+            ]
+          },
+          {
+            "phase": "Phase 2: Cloud Sync & Dashboard",
+            "duration": "4-5 days",
+            "deliverables": [
+              "Web UI",
+              "Security validation checks"
+            ]
+          }
+        ],
+        "uncertaintyAdvisory": "Analysis generated via DEVFORGE AI Gateway. Market saturation and existing proprietary plugins should be validated independently.",
+        "confidenceScore": 80
+      }
+    },
+    {
+      "id": "prob_gh_102",
+      "source": "github",
+      "sourceUrl": "https://github.com/vercel/next.js/issues/54210",
+      "sourceId": "vercel/next.js#54210",
+      "title": "Server Actions missing CSRF token validation when invoked via raw fetch()",
+      "body": "When invoking Next.js App Router server actions via client fetch requests with specific headers, anti-CSRF token verification is bypassed if the Origin header is forged or missing in specific reverse proxy configurations. Developers building multi-tenant SaaS applications need an edge-level middleware guard to strictly enforce request authenticity.",
+      "author": "sec-researcher-42",
+      "createdAt": "2026-10-08T03:26:08.657Z",
+      "commentsCount": 68,
+      "upvotesCount": 142,
+      "tags": [
+        "Security",
+        "CSRF",
+        "App Router",
+        "Next.js"
+      ],
+      "ecosystem": "npm"
+    },
+    {
+      "id": "prob_hn_204",
+      "source": "hackernews",
+      "sourceUrl": "https://news.ycombinator.com/item?id=39120488",
+      "sourceId": "hn_39120488",
+      "title": "Ask HN: Why is local vector search in microservices still so painful?",
+      "body": "We are running hundreds of ephemeral container workers that need to do small KNN lookups (5k-10k items) for semantic deduplication. Cloud vector databases add 80-150ms round-trip latency and cost hundreds of dollars/month. Chroma and LanceDB are improving but still heavy for quick in-memory microservice restarts. Anyone built a lightweight embedded alternative?",
+      "author": "vector_dev",
+      "createdAt": "2026-10-05T03:26:08.657Z",
+      "commentsCount": 114,
+      "upvotesCount": 289,
+      "tags": [
+        "Ask HN",
+        "Vector Search",
+        "Latency",
+        "Microservices"
+      ],
+      "ecosystem": "pypi"
+    },
+    {
+      "id": "prob_gh_308",
+      "source": "github",
+      "sourceUrl": "https://github.com/kubernetes/kubernetes/issues/119820",
+      "sourceId": "kubernetes/kubernetes#119820",
+      "title": "ConfigMap drift detection without heavy gitops controllers",
+      "body": "Small dev teams running k8s without ArgoCD or Flux lack a lightweight CLI or sidecar that simply alerts when running pod environment variables drift from the repository source of truth. Existing solutions require cluster-admin operator privileges and high memory overhead.",
+      "author": "cloudnative_sam",
+      "createdAt": "2026-10-03T03:26:08.657Z",
+      "commentsCount": 42,
+      "upvotesCount": 89,
+      "tags": [
+        "Kubernetes",
+        "DevOps",
+        "Drift Detection",
+        "CLI"
+      ],
+      "ecosystem": "go"
+    }
+  ],
+  "scans": [
+    {
+      "id": "scan_1791697525710",
+      "repoUrl": "https://github.com/sumit1004/phone-detection-system",
+      "owner": "sumit1004",
+      "repo": "phone-detection-system",
+      "scannedAt": "2026-10-11T05:45:25.710Z",
+      "scanDurationMs": 1532,
+      "executiveScore": 10,
+      "securityGrade": "F",
+      "totalFindings": 63,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 63,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 63
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [
+        {
+          "id": "osv_GHSA-3749-ghw9-m3mg_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-3749-ghw9-m3mg)",
+          "description": "Advisory GHSA-3749-ghw9-m3mg affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-3749-ghw9-m3mg",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-3749-ghw9-m3mg",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-53q9-r3pm-6pq6_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-53q9-r3pm-6pq6)",
+          "description": "Advisory GHSA-53q9-r3pm-6pq6 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-53q9-r3pm-6pq6",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-53q9-r3pm-6pq6",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-5pcm-hx3q-hm94_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-5pcm-hx3q-hm94)",
+          "description": "Advisory GHSA-5pcm-hx3q-hm94 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-5pcm-hx3q-hm94",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-5pcm-hx3q-hm94",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-887c-mr87-cxwp_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-887c-mr87-cxwp)",
+          "description": "Advisory GHSA-887c-mr87-cxwp affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-887c-mr87-cxwp",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-887c-mr87-cxwp",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-c678-jfcj-6jmf_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-c678-jfcj-6jmf)",
+          "description": "Advisory GHSA-c678-jfcj-6jmf affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-c678-jfcj-6jmf",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-c678-jfcj-6jmf",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-f4hp-rmr7-r7v8_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-f4hp-rmr7-r7v8)",
+          "description": "Advisory GHSA-f4hp-rmr7-r7v8 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-f4hp-rmr7-r7v8",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-f4hp-rmr7-r7v8",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-pg7h-5qx3-wjr3_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-pg7h-5qx3-wjr3)",
+          "description": "Advisory GHSA-pg7h-5qx3-wjr3 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-pg7h-5qx3-wjr3",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-pg7h-5qx3-wjr3",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-qfhq-4f3w-5fph_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-qfhq-4f3w-5fph)",
+          "description": "Advisory GHSA-qfhq-4f3w-5fph affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-qfhq-4f3w-5fph",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-qfhq-4f3w-5fph",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-rrmf-rvhw-rf47_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-rrmf-rvhw-rf47)",
+          "description": "Advisory GHSA-rrmf-rvhw-rf47 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-rrmf-rvhw-rf47",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-rrmf-rvhw-rf47",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-vgrw-7cvw-pwgx_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-vgrw-7cvw-pwgx)",
+          "description": "Advisory GHSA-vgrw-7cvw-pwgx affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-vgrw-7cvw-pwgx",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-vgrw-7cvw-pwgx",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-x3gm-94wq-g975_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (GHSA-x3gm-94wq-g975)",
+          "description": "Advisory GHSA-x3gm-94wq-g975 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-x3gm-94wq-g975",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-x3gm-94wq-g975",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2024-250_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2024-250)",
+          "description": "Advisory PYSEC-2024-250 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2024-250",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2024-250",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2024-251_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2024-251)",
+          "description": "Advisory PYSEC-2024-251 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2024-251",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2024-251",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2024-252_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2024-252)",
+          "description": "Advisory PYSEC-2024-252 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2024-252",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2024-252",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2024-259_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2024-259)",
+          "description": "Advisory PYSEC-2024-259 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2024-259",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2024-259",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-191_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-191)",
+          "description": "Advisory PYSEC-2025-191 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-191",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-191",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-198_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-198)",
+          "description": "Advisory PYSEC-2025-198 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-198",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-198",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-203_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-203)",
+          "description": "Advisory PYSEC-2025-203 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-203",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-203",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-204_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-204)",
+          "description": "Advisory PYSEC-2025-204 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-204",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-204",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-205_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-205)",
+          "description": "Advisory PYSEC-2025-205 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-205",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-205",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-206_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-206)",
+          "description": "Advisory PYSEC-2025-206 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-206",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-206",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-207_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-207)",
+          "description": "Advisory PYSEC-2025-207 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-207",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-207",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-208_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-208)",
+          "description": "Advisory PYSEC-2025-208 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-208",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-208",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-209_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-209)",
+          "description": "Advisory PYSEC-2025-209 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-209",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-209",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2025-41_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2025-41)",
+          "description": "Advisory PYSEC-2025-41 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2025-41",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2025-41",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-139_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2026-139)",
+          "description": "Advisory PYSEC-2026-139 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-139",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-139",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-1970_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2026-1970)",
+          "description": "Advisory PYSEC-2026-1970 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-1970",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-1970",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2286_torch",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in torch (PYSEC-2026-2286)",
+          "description": "Advisory PYSEC-2026-2286 affects package torch version 2.0.1.",
+          "affectedTarget": "torch@2.0.1",
+          "currentVersion": "2.0.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2286",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2286",
+          "evidence": "requirements.txt -> \"torch\": \"2.0.1\"",
+          "remediation": "Upgrade torch to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-3f63-hfp8-52jq_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-3f63-hfp8-52jq)",
+          "description": "Advisory GHSA-3f63-hfp8-52jq affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-3f63-hfp8-52jq",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-3f63-hfp8-52jq",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-44wm-f244-xhp3_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-44wm-f244-xhp3)",
+          "description": "Advisory GHSA-44wm-f244-xhp3 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-44wm-f244-xhp3",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-44wm-f244-xhp3",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-45hq-cxwh-f6vc_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-45hq-cxwh-f6vc)",
+          "description": "Advisory GHSA-45hq-cxwh-f6vc affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-45hq-cxwh-f6vc",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-45hq-cxwh-f6vc",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-4x4j-2g7c-83w6_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-4x4j-2g7c-83w6)",
+          "description": "Advisory GHSA-4x4j-2g7c-83w6 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-4x4j-2g7c-83w6",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-4x4j-2g7c-83w6",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-5x94-69rx-g8h2_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-5x94-69rx-g8h2)",
+          "description": "Advisory GHSA-5x94-69rx-g8h2 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-5x94-69rx-g8h2",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-5x94-69rx-g8h2",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-62p4-gmf7-7g93_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-62p4-gmf7-7g93)",
+          "description": "Advisory GHSA-62p4-gmf7-7g93 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-62p4-gmf7-7g93",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-62p4-gmf7-7g93",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-6r8x-57c9-28j4_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-6r8x-57c9-28j4)",
+          "description": "Advisory GHSA-6r8x-57c9-28j4 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-6r8x-57c9-28j4",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-6r8x-57c9-28j4",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-8v84-f9pq-wr9x_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-8v84-f9pq-wr9x)",
+          "description": "Advisory GHSA-8v84-f9pq-wr9x affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-8v84-f9pq-wr9x",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-8v84-f9pq-wr9x",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-9hw9-ch79-4vh6_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-9hw9-ch79-4vh6)",
+          "description": "Advisory GHSA-9hw9-ch79-4vh6 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-9hw9-ch79-4vh6",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-9hw9-ch79-4vh6",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-fj7v-r99m-22gq_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-fj7v-r99m-22gq)",
+          "description": "Advisory GHSA-fj7v-r99m-22gq affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-fj7v-r99m-22gq",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-fj7v-r99m-22gq",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-j7hp-h8jx-5ppr_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-j7hp-h8jx-5ppr)",
+          "description": "Advisory GHSA-j7hp-h8jx-5ppr affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-j7hp-h8jx-5ppr",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-j7hp-h8jx-5ppr",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-jjj6-mw9f-p565_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-jjj6-mw9f-p565)",
+          "description": "Advisory GHSA-jjj6-mw9f-p565 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-jjj6-mw9f-p565",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-jjj6-mw9f-p565",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-phj9-mv4w-65pm_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-phj9-mv4w-65pm)",
+          "description": "Advisory GHSA-phj9-mv4w-65pm affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-phj9-mv4w-65pm",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-phj9-mv4w-65pm",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-r73j-pqj5-w3x7_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-r73j-pqj5-w3x7)",
+          "description": "Advisory GHSA-r73j-pqj5-w3x7 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-r73j-pqj5-w3x7",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-r73j-pqj5-w3x7",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-vjc4-5qp5-m44j_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-vjc4-5qp5-m44j)",
+          "description": "Advisory GHSA-vjc4-5qp5-m44j affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-vjc4-5qp5-m44j",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-vjc4-5qp5-m44j",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-wjx4-4jcj-g98j_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-wjx4-4jcj-g98j)",
+          "description": "Advisory GHSA-wjx4-4jcj-g98j affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-wjx4-4jcj-g98j",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-wjx4-4jcj-g98j",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-xj96-63gp-2gmr_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (GHSA-xj96-63gp-2gmr)",
+          "description": "Advisory GHSA-xj96-63gp-2gmr affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-xj96-63gp-2gmr",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-xj96-63gp-2gmr",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2023-175_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2023-175)",
+          "description": "Advisory PYSEC-2023-175 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2023-175",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2023-175",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-165_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-165)",
+          "description": "Advisory PYSEC-2026-165 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-165",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-165",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-1793_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-1793)",
+          "description": "Advisory PYSEC-2026-1793 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-1793",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-1793",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-1794_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-1794)",
+          "description": "Advisory PYSEC-2026-1794 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-1794",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-1794",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2253_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-2253)",
+          "description": "Advisory PYSEC-2026-2253 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2253",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2253",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2254_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-2254)",
+          "description": "Advisory PYSEC-2026-2254 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2254",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2254",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2255_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-2255)",
+          "description": "Advisory PYSEC-2026-2255 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2255",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2255",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2256_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-2256)",
+          "description": "Advisory PYSEC-2026-2256 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2256",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2256",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2257_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-2257)",
+          "description": "Advisory PYSEC-2026-2257 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2257",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2257",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-2874_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-2874)",
+          "description": "Advisory PYSEC-2026-2874 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-2874",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-2874",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3451_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3451)",
+          "description": "Advisory PYSEC-2026-3451 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3451",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3451",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3453_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3453)",
+          "description": "Advisory PYSEC-2026-3453 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3453",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3453",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3454_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3454)",
+          "description": "Advisory PYSEC-2026-3454 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3454",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3454",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3493_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3493)",
+          "description": "Advisory PYSEC-2026-3493 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3493",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3493",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3494_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3494)",
+          "description": "Advisory PYSEC-2026-3494 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3494",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3494",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3495_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3495)",
+          "description": "Advisory PYSEC-2026-3495 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3495",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3495",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-3496_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-3496)",
+          "description": "Advisory PYSEC-2026-3496 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-3496",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-3496",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_PYSEC-2026-457_Pillow",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in Pillow (PYSEC-2026-457)",
+          "description": "Advisory PYSEC-2026-457 affects package Pillow version 10.0.0.",
+          "affectedTarget": "Pillow@10.0.0",
+          "currentVersion": "10.0.0",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "PYSEC-2026-457",
+          "advisoryUrl": "https://osv.dev/vulnerability/PYSEC-2026-457",
+          "evidence": "requirements.txt -> \"Pillow\": \"10.0.0\"",
+          "remediation": "Upgrade Pillow to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        }
+      ],
+      "dependenciesAudited": 7,
+      "filesInspected": [
+        "requirements.txt"
+      ]
+    },
+    {
+      "id": "scan_1791697476193",
+      "repoUrl": "https://github.com/sumit1004/campusrank_backend",
+      "owner": "sumit1004",
+      "repo": "campusrank_backend",
+      "scannedAt": "2026-10-11T05:44:36.193Z",
+      "scanDurationMs": 1219,
+      "executiveScore": 78,
+      "securityGrade": "B",
+      "totalFindings": 11,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 11,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 11
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [
+        {
+          "id": "osv_GHSA-qw6h-vgh9-j6wx_express",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in express (GHSA-qw6h-vgh9-j6wx)",
+          "description": "Advisory GHSA-qw6h-vgh9-j6wx affects package express version 4.19.2.",
+          "affectedTarget": "express@4.19.2",
+          "currentVersion": "4.19.2",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-qw6h-vgh9-j6wx",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-qw6h-vgh9-j6wx",
+          "evidence": "package.json -> \"express\": \"4.19.2\"",
+          "remediation": "Upgrade express to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-3p4h-7m6x-2hcm_multer",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in multer (GHSA-3p4h-7m6x-2hcm)",
+          "description": "Advisory GHSA-3p4h-7m6x-2hcm affects package multer version 2.1.1.",
+          "affectedTarget": "multer@2.1.1",
+          "currentVersion": "2.1.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-3p4h-7m6x-2hcm",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-3p4h-7m6x-2hcm",
+          "evidence": "package.json -> \"multer\": \"2.1.1\"",
+          "remediation": "Upgrade multer to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-535w-7cp7-47q4_multer",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in multer (GHSA-535w-7cp7-47q4)",
+          "description": "Advisory GHSA-535w-7cp7-47q4 affects package multer version 2.1.1.",
+          "affectedTarget": "multer@2.1.1",
+          "currentVersion": "2.1.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-535w-7cp7-47q4",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-535w-7cp7-47q4",
+          "evidence": "package.json -> \"multer\": \"2.1.1\"",
+          "remediation": "Upgrade multer to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-72gw-mp4g-v24j_multer",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in multer (GHSA-72gw-mp4g-v24j)",
+          "description": "Advisory GHSA-72gw-mp4g-v24j affects package multer version 2.1.1.",
+          "affectedTarget": "multer@2.1.1",
+          "currentVersion": "2.1.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-72gw-mp4g-v24j",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-72gw-mp4g-v24j",
+          "evidence": "package.json -> \"multer\": \"2.1.1\"",
+          "remediation": "Upgrade multer to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-qvfw-j98x-7q72_multer",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in multer (GHSA-qvfw-j98x-7q72)",
+          "description": "Advisory GHSA-qvfw-j98x-7q72 affects package multer version 2.1.1.",
+          "affectedTarget": "multer@2.1.1",
+          "currentVersion": "2.1.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-qvfw-j98x-7q72",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-qvfw-j98x-7q72",
+          "evidence": "package.json -> \"multer\": \"2.1.1\"",
+          "remediation": "Upgrade multer to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-wc9g-mqfw-jrwm_multer",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in multer (GHSA-wc9g-mqfw-jrwm)",
+          "description": "Advisory GHSA-wc9g-mqfw-jrwm affects package multer version 2.1.1.",
+          "affectedTarget": "multer@2.1.1",
+          "currentVersion": "2.1.1",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-wc9g-mqfw-jrwm",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-wc9g-mqfw-jrwm",
+          "evidence": "package.json -> \"multer\": \"2.1.1\"",
+          "remediation": "Upgrade multer to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-3f6p-5ww8-9rcr_mysql2",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in mysql2 (GHSA-3f6p-5ww8-9rcr)",
+          "description": "Advisory GHSA-3f6p-5ww8-9rcr affects package mysql2 version 3.9.7.",
+          "affectedTarget": "mysql2@3.9.7",
+          "currentVersion": "3.9.7",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-3f6p-5ww8-9rcr",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-3f6p-5ww8-9rcr",
+          "evidence": "package.json -> \"mysql2\": \"3.9.7\"",
+          "remediation": "Upgrade mysql2 to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-pmh2-wpjm-fj45_mysql2",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in mysql2 (GHSA-pmh2-wpjm-fj45)",
+          "description": "Advisory GHSA-pmh2-wpjm-fj45 affects package mysql2 version 3.9.7.",
+          "affectedTarget": "mysql2@3.9.7",
+          "currentVersion": "3.9.7",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-pmh2-wpjm-fj45",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-pmh2-wpjm-fj45",
+          "evidence": "package.json -> \"mysql2\": \"3.9.7\"",
+          "remediation": "Upgrade mysql2 to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-rgwj-5xj2-c3m3_mysql2",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in mysql2 (GHSA-rgwj-5xj2-c3m3)",
+          "description": "Advisory GHSA-rgwj-5xj2-c3m3 affects package mysql2 version 3.9.7.",
+          "affectedTarget": "mysql2@3.9.7",
+          "currentVersion": "3.9.7",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-rgwj-5xj2-c3m3",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-rgwj-5xj2-c3m3",
+          "evidence": "package.json -> \"mysql2\": \"3.9.7\"",
+          "remediation": "Upgrade mysql2 to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-4r6h-8v6p-xvw6_xlsx",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in xlsx (GHSA-4r6h-8v6p-xvw6)",
+          "description": "Advisory GHSA-4r6h-8v6p-xvw6 affects package xlsx version 0.18.5.",
+          "affectedTarget": "xlsx@0.18.5",
+          "currentVersion": "0.18.5",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-4r6h-8v6p-xvw6",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-4r6h-8v6p-xvw6",
+          "evidence": "package.json -> \"xlsx\": \"0.18.5\"",
+          "remediation": "Upgrade xlsx to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-5pgg-2g8v-p4x9_xlsx",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in xlsx (GHSA-5pgg-2g8v-p4x9)",
+          "description": "Advisory GHSA-5pgg-2g8v-p4x9 affects package xlsx version 0.18.5.",
+          "affectedTarget": "xlsx@0.18.5",
+          "currentVersion": "0.18.5",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-5pgg-2g8v-p4x9",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-5pgg-2g8v-p4x9",
+          "evidence": "package.json -> \"xlsx\": \"0.18.5\"",
+          "remediation": "Upgrade xlsx to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        }
+      ],
+      "dependenciesAudited": 14,
+      "filesInspected": [
+        "package.json",
+        "server.js"
+      ]
+    },
+    {
+      "id": "scan_1791697472321",
+      "repoUrl": "https://github.com/torvalds/linux",
+      "owner": "torvalds",
+      "repo": "linux",
+      "scannedAt": "2026-10-11T05:44:32.321Z",
+      "scanDurationMs": 1006,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 0,
+      "filesInspected": [
+        "(No supported manifests identified in repo root)"
+      ]
+    },
+    {
+      "id": "scan_1791697443528",
+      "repoUrl": "https://github.com/sumit1004/Evoq",
+      "owner": "sumit1004",
+      "repo": "Evoq",
+      "scannedAt": "2026-10-11T05:44:03.528Z",
+      "scanDurationMs": 485,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 0,
+      "filesInspected": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "scan_1791697419183",
+      "repoUrl": "https://github.com/priyanshu-debug26/f1",
+      "owner": "priyanshu-debug26",
+      "repo": "f1",
+      "scannedAt": "2026-10-11T05:43:39.183Z",
+      "scanDurationMs": 914,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 0,
+      "filesInspected": [
+        "(No supported manifests identified in repo root)"
+      ]
+    },
+    {
+      "id": "scan_1791697399347",
+      "repoUrl": "https://github.com/priyanshu-debug26/Ai_Debugger",
+      "owner": "priyanshu-debug26",
+      "repo": "Ai_Debugger",
+      "scannedAt": "2026-10-11T05:43:19.347Z",
+      "scanDurationMs": 1395,
+      "executiveScore": 96,
+      "securityGrade": "A+",
+      "totalFindings": 2,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 2
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [
+        {
+          "id": "osv_GHSA-fx2h-pf6j-xcff_vite",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in vite (GHSA-fx2h-pf6j-xcff)",
+          "description": "Advisory GHSA-fx2h-pf6j-xcff affects package vite version 8.0.12.",
+          "affectedTarget": "vite@8.0.12",
+          "currentVersion": "8.0.12",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-fx2h-pf6j-xcff",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-fx2h-pf6j-xcff",
+          "evidence": "package.json -> \"vite\": \"8.0.12\"",
+          "remediation": "Upgrade vite to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-v6wh-96g9-6wx3_vite",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in vite (GHSA-v6wh-96g9-6wx3)",
+          "description": "Advisory GHSA-v6wh-96g9-6wx3 affects package vite version 8.0.12.",
+          "affectedTarget": "vite@8.0.12",
+          "currentVersion": "8.0.12",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-v6wh-96g9-6wx3",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-v6wh-96g9-6wx3",
+          "evidence": "package.json -> \"vite\": \"8.0.12\"",
+          "remediation": "Upgrade vite to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        }
+      ],
+      "dependenciesAudited": 13,
+      "filesInspected": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "scan_1791697383842",
+      "repoUrl": "https://github.com/priyanshu-debug26/CRISP_Assingment",
+      "owner": "priyanshu-debug26",
+      "repo": "CRISP_Assingment",
+      "scannedAt": "2026-10-11T05:43:03.842Z",
+      "scanDurationMs": 1035,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 0,
+      "filesInspected": [
+        "(No supported manifests identified in repo root)"
+      ]
+    },
+    {
+      "id": "scan_1791696048665",
+      "repoUrl": "https://github.com/priyanshu-debug26/F1-Live-Tracker",
+      "owner": "priyanshu-debug26",
+      "repo": "F1-Live-Tracker",
+      "scannedAt": "2026-10-11T05:20:48.665Z",
+      "scanDurationMs": 1527,
+      "executiveScore": 96,
+      "securityGrade": "A+",
+      "totalFindings": 2,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 2,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 2
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [
+        {
+          "id": "osv_GHSA-fx2h-pf6j-xcff_vite",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in vite (GHSA-fx2h-pf6j-xcff)",
+          "description": "Advisory GHSA-fx2h-pf6j-xcff affects package vite version 8.0.12.",
+          "affectedTarget": "vite@8.0.12",
+          "currentVersion": "8.0.12",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-fx2h-pf6j-xcff",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-fx2h-pf6j-xcff",
+          "evidence": "package.json -> \"vite\": \"8.0.12\"",
+          "remediation": "Upgrade vite to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        },
+        {
+          "id": "osv_GHSA-v6wh-96g9-6wx3_vite",
+          "category": "dependency",
+          "severity": "LOW",
+          "title": "Vulnerability in vite (GHSA-v6wh-96g9-6wx3)",
+          "description": "Advisory GHSA-v6wh-96g9-6wx3 affects package vite version 8.0.12.",
+          "affectedTarget": "vite@8.0.12",
+          "currentVersion": "8.0.12",
+          "fixedVersion": "Latest patched version",
+          "cveReference": "GHSA-v6wh-96g9-6wx3",
+          "advisoryUrl": "https://osv.dev/vulnerability/GHSA-v6wh-96g9-6wx3",
+          "evidence": "package.json -> \"vite\": \"8.0.12\"",
+          "remediation": "Upgrade vite to Latest patched version or run npm/pip audit fix to update dependencies.",
+          "scanner": "OSV.dev Vulnerability DB"
+        }
+      ],
+      "dependenciesAudited": 11,
+      "filesInspected": [
+        "package.json"
+      ]
+    },
+    {
+      "id": "scan_1791696003404",
+      "repoUrl": "https://github.com/AyushPatwa11/VeriGraph-AI",
+      "owner": "AyushPatwa11",
+      "repo": "VeriGraph-AI",
+      "scannedAt": "2026-10-11T05:20:03.404Z",
+      "scanDurationMs": 632,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 0,
+      "filesInspected": [
+        "docker-compose.yml"
+      ]
+    },
+    {
+      "id": "scan_1791694105771",
+      "repoUrl": "https://github.com/expressjs/express",
+      "owner": "expressjs",
+      "repo": "express",
+      "scannedAt": "2026-10-11T04:48:25.771Z",
+      "scanDurationMs": 486,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 44,
+      "filesInspected": [
+        "package.json",
+        "index.js"
+      ]
+    },
+    {
+      "id": "scan_1791689206628",
+      "repoUrl": "https://github.com/expressjs/express",
+      "owner": "expressjs",
+      "repo": "express",
+      "scannedAt": "2026-10-11T03:26:46.628Z",
+      "scanDurationMs": 2212,
+      "executiveScore": 100,
+      "securityGrade": "A+",
+      "totalFindings": 0,
+      "severityBreakdown": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 0,
+        "info": 0
+      },
+      "scannersRun": [
+        {
+          "name": "OSV.dev Vulnerability DB",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "Gitleaks Pattern Engine",
+          "status": "completed",
+          "findingsCount": 0
+        },
+        {
+          "name": "DEVFORGE Dockerfile Linter",
+          "status": "completed",
+          "findingsCount": 0,
+          "note": "No Dockerfile present in repository root"
+        },
+        {
+          "name": "Heuristic API Security Audit",
+          "status": "completed",
+          "findingsCount": 0
+        }
+      ],
+      "findings": [],
+      "dependenciesAudited": 44,
+      "filesInspected": [
+        "index.js",
+        "package.json"
+      ]
+    }
+  ],
+  "gatewayLogs": [
+    {
+      "id": "gw_1791697629494",
+      "timestamp": "2026-10-11T05:47:09.494Z",
+      "provider": "groq",
+      "model": "openai/gpt-oss-safeguard-20b",
+      "latencyMs": 2385,
+      "failoverOccurred": true,
+      "totalTokens": 2282
+    },
+    {
+      "id": "gw_1791696787392",
+      "timestamp": "2026-10-11T05:33:07.392Z",
+      "provider": "groq",
+      "model": "openai/gpt-oss-safeguard-20b",
+      "latencyMs": 2432,
+      "failoverOccurred": true,
+      "totalTokens": 2486
+    },
+    {
+      "id": "gw_1791696115437",
+      "timestamp": "2026-10-11T05:21:55.437Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 752,
+      "failoverOccurred": true,
+      "totalTokens": 742
+    },
+    {
+      "id": "gw_1791696112123",
+      "timestamp": "2026-10-11T05:21:52.123Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 752,
+      "failoverOccurred": true,
+      "totalTokens": 742
+    },
+    {
+      "id": "gw_1791695979940",
+      "timestamp": "2026-10-11T05:19:39.940Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 752,
+      "failoverOccurred": true,
+      "totalTokens": 742
+    },
+    {
+      "id": "gw_1791695959585",
+      "timestamp": "2026-10-11T05:19:19.585Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 752,
+      "failoverOccurred": true,
+      "totalTokens": 901
+    },
+    {
+      "id": "gw_1791695749694",
+      "timestamp": "2026-10-11T05:15:49.694Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 753,
+      "failoverOccurred": false,
+      "totalTokens": 849
+    },
+    {
+      "id": "gw_1791694313317",
+      "timestamp": "2026-10-11T04:51:53.317Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 754,
+      "failoverOccurred": false,
+      "totalTokens": 902
+    },
+    {
+      "id": "gw_1791689217947",
+      "timestamp": "2026-10-11T03:26:57.947Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 754,
+      "failoverOccurred": false,
+      "totalTokens": 467
+    },
+    {
+      "id": "gw_1791689199638",
+      "timestamp": "2026-10-11T03:26:39.638Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 754,
+      "failoverOccurred": false,
+      "totalTokens": 707
+    },
+    {
+      "id": "gw_1791689182063",
+      "timestamp": "2026-10-11T03:26:22.063Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 221,
+      "failoverOccurred": true,
+      "totalTokens": 102
+    },
+    {
+      "id": "gw_1791689176181",
+      "timestamp": "2026-10-11T03:26:16.181Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 754,
+      "failoverOccurred": true,
+      "totalTokens": 108
+    },
+    {
+      "id": "gw_1791689174667",
+      "timestamp": "2026-10-11T03:26:14.667Z",
+      "provider": "mock",
+      "model": "devforge-gateway-simulator",
+      "latencyMs": 452,
+      "failoverOccurred": false,
+      "totalTokens": 108
+    },
+    {
+      "id": "gw_log_1",
+      "timestamp": "2026-10-11T02:26:08.657Z",
+      "provider": "gemini",
+      "model": "gemini-1.5-pro",
+      "latencyMs": 840,
+      "failoverOccurred": false,
+      "totalTokens": 1240
+    },
+    {
+      "id": "gw_log_2",
+      "timestamp": "2026-10-11T01:26:08.657Z",
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "latencyMs": 310,
+      "failoverOccurred": false,
+      "totalTokens": 980
+    }
+  ]
+}
